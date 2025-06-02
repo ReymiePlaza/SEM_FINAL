@@ -9,7 +9,7 @@ $auth = new AuthController();
 error_log('Session ID: ' . session_id());
 
 if($auth->isLoggedIn()) {
-    header("Location: /SEMS/views/admin/dashboard.php");
+    header("Location: /SEMS/SEM_FINAL/views/admin/login.php");
     exit();
 }
 
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         error_log('Login successful for user: ' . $user_id);
         error_log('Session after login: ' . print_r($_SESSION, true));
         
-        header("Location: /SEMS/views/admin/dashboard.php");
+        header("Location: /SEMS/SEM_FINALS/views/admin/dasbourd.php");
         exit();
     } else {
         $error = "Invalid credentials!";
